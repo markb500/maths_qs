@@ -62,10 +62,10 @@ function noncalc2() {
     sumq = "";
     suma = "";
     document.getElementById("a").innerHTML = "";
-    document.getElementById("noteslink").style.visibility="visible";
-    document.getElementById("noteslink").onclick = function() {
-        window.open("images/20200427-MathsBook1BasicNumv1_3-APO.pdf#page=7", "_blank")
-    }
+    // document.getElementById("noteslink").style.visibility="visible";
+    // document.getElementById("noteslink").onclick = function() {
+    //     window.open("images/20200427-MathsBook1BasicNumv1_3-APO.pdf#page=7", "_blank")
+    // }
     do {
         a = rndgen(0.1, 9.9, 2, 0.01, -1);
         b = rndgen(-10, 10, 2, 0.01, -1);
@@ -94,10 +94,10 @@ function noncalc3() {
     sumq = "";
     suma = "";
     document.getElementById("a").innerHTML = "";
-    document.getElementById("noteslink").style.visibility="visible";
-    document.getElementById("noteslink").onclick = function() {
-        window.open("images/20200427-MathsBook1BasicNumv1_3-APO.pdf#page=7", "_blank")
-    }
+    // document.getElementById("noteslink").style.visibility="visible";
+    // document.getElementById("noteslink").onclick = function() {
+    //     window.open("images/20200427-MathsBook1BasicNumv1_3-APO.pdf#page=7", "_blank")
+    // }
     do {
         a = rndgen(0.1, 9.9, 2, 0.01, -1);
         b = rndgen(-10, 10, 1, 0.1, -1);
@@ -127,10 +127,10 @@ function noncalc4() {
     sumq = "";
     suma = "";
     document.getElementById("a").innerHTML = "";
-    document.getElementById("noteslink").style.visibility="visible";
-    document.getElementById("noteslink").onclick = function() {
-        window.open("images/20200427-MathsBook1BasicNumv1_3-APO.pdf#page=54", "_blank")
-    }
+    // document.getElementById("noteslink").style.visibility="visible";
+    // document.getElementById("noteslink").onclick = function() {
+    //     window.open("images/20200427-MathsBook1BasicNumv1_3-APO.pdf#page=54", "_blank")
+    // }
 
     do {
         a = rndgen(1, 20, 0, 1, -1);
@@ -167,10 +167,10 @@ function noncalc5() {
     sumq = "";
     suma = "";
     document.getElementById("a").innerHTML = "";
-    document.getElementById("noteslink").style.visibility="visible";
-    document.getElementById("noteslink").onclick = function() {
-        window.open("images/20200427-MathsBook1BasicNumv1_3-APO.pdf#page=54", "_blank")
-    }
+    // document.getElementById("noteslink").style.visibility="visible";
+    // document.getElementById("noteslink").onclick = function() {
+    //     window.open("images/20200427-MathsBook1BasicNumv1_3-APO.pdf#page=54", "_blank")
+    // }
 
     do {
         a = rndgen(1, 20, 0, 1, -1);

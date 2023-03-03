@@ -7,6 +7,17 @@ function percentratio() {
     myCanvas.height = "0.5";
     myCanvas.width = "0.5";
     myCanvas.style = "border: none;";
+    document.getElementById("myCanvas2");
+    myCanvas2.height = "0.5";
+    myCanvas2.width = "0.5";
+    myCanvas2.style.visibility = "hidden";
+    if (SolnWin) {      //Prior to 1st open of SolnWin, the .closed test is null
+        if (!SolnWin.closed) {  //Once SolnWin has been opened, SolnWin is true whether open or closed so need this extra test
+            SolnWin.document.getElementById("myCanvas3");
+            SolnWin.myCanvas3.height = "0.5";
+            SolnWin.myCanvas3.width = "0.5";
+        }
+    }
     sumq = "";
     suma = "";
     document.getElementById("a").innerHTML = "";
@@ -76,9 +87,9 @@ function percentratio() {
                         "\\times 100=" + pct + "\\ \\%$$";   
             break;
         case 6://Without using a calculator, divide num1 unit(iratunit) in the ratio rat1:rat2:rat3.
-        // document.getElementById("noteslink").onclick = function() {
-        //     window.open("images/20200427-MathsBook1BasicNumv1_3-APO.pdf#page=52", "_blank")
-        // }
+            // document.getElementById("noteslink").onclick = function() {
+            //     window.open("images/20200427-MathsBook1BasicNumv1_3-APO.pdf#page=52", "_blank")
+            // }
             do {
                 num1 = rndgen(48, 91, 0, 1, -1);
                 rat1 = rndgen(1, 10, 0, 1, -1);

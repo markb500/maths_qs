@@ -1,34 +1,11 @@
-var prevsum = 0, prev2sum = 0, x1, x2, y1, y2, k;
+var sumarr = [], sumq, suma, x1, x2, y1, y2, k;
 function prop() {
     //Produces randomly selected problems in proportionality
     var sum;
-    document.getElementById("myCanvas");
-    myCanvas.height = "0.5";
-    myCanvas.width = "0.5";
-    myCanvas.style = "border: none;";
-    document.getElementById("myCanvas2");
-    myCanvas2.height = "0.5";
-    myCanvas2.width = "0.5";
-    myCanvas2.style.visibility = "hidden";
-    if (SolnWin) {      //Prior to 1st open of SolnWin, the .closed test is null
-        if (!SolnWin.closed) {  //Once SolnWin has been opened, SolnWin is true whether open or closed so need this extra test
-            SolnWin.document.getElementById("myCanvas3");
-            SolnWin.myCanvas3.height = "0.5";
-            SolnWin.myCanvas3.width = "0.5";
-        }
-    }
     sumq = "";
     suma = "";
-    document.getElementById("a").innerHTML = "";
-    // document.getElementById("noteslink").style.visibility="visible";
-    // document.getElementById("noteslink").onclick = function() {
-    //     window.open("images/20200505-MathsBook8Proportionv1_3-APO.pdf#page=4", "_blank")
-    // }
-    do {
-        sum = rndgen(1, 4, 0, 1, -1);
-    } while(sum === prevsum || sum === prev2sum)
-    prev2sum = prevsum;
-    prevsum = sum;
+    sumarr = QLimitRepeats(sumarr, 4);   //Ensures no repeat question until at least 50% of questions shown
+    sum = sumarr[sumarr.length - 1];
     switch(sum) {
         case 1:     //y prop root x
             y1 = rndgen(2, 10, 0, 1, -1);
@@ -39,8 +16,18 @@ function prop() {
                 do {
                     x2 = dp(Math.pow(y2 / k, 2), 2, 2);
                 } while (x2 === x1);
+                if (y1 / Math.sqrt(x1) - dp(y1 / Math.sqrt(x1), 0, -1) === 0) {
+                    sumq += " and use it to find the value of x ";
+                } else {
+                    sumq += " (to 3 decimal places) and use it to find the value of x ";
+                }
                 sumq += "If y is proportional to &#8730x and y&nbsp;=&nbsp;" + y1 + " when x&nbsp;=&nbsp;" + x1 + ", find the ";
-                sumq += "constant of proportionality (to 3 decimal places) and use it to find the value of x ";
+                sumq += "constant of proportionality";
+                if (y1 / Math.sqrt(x1) - dp(y1 / Math.sqrt(x1), 0, -1) === 0) {
+                    sumq += " and use it to find the value of x ";
+                } else {
+                    sumq += " (to 3 decimal places) and use it to find the value of x ";
+                }
                 sumq += "(to 2 decimal places) when y&nbsp;=&nbsp;" + y2;
 
                 suma += "$$\\begin{aligned}y&\\propto \\sqrt{x}\\\\[5pt]";
@@ -201,6 +188,6 @@ function prop() {
             }
             break;
     }
-    document.getElementById("q").innerHTML = sumq;
-    document.getElementById("btnSoln").style.visibility="visible";
+    var sumArray = [sumq, suma];
+    return sumArray;
 }

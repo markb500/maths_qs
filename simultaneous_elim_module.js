@@ -5,10 +5,6 @@ function simultaneouselim() {
     sumq = "";
     suma = "";
     document.getElementById("a").innerHTML = "";
-    // document.getElementById("noteslink").style.visibility="visible";
-    // document.getElementById("noteslink").onclick = function() {
-    //     window.open("images/20200505-MathsBook10GraphsSimEquv1_5-APO.pdf#page=20", "_blank")
-    // }
     switch(rndgen(1, 4, 0, 1, -1)) {
         case 1:
             ltr1 = "x";

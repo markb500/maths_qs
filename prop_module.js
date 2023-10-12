@@ -1,11 +1,11 @@
-var sumarr = [], sumq, suma, x1, x2, y1, y2, k;
+var sumarrprop = [], sumq, suma, x1, x2, y1, y2, k;
 function prop() {
     //Produces randomly selected problems in proportionality
     var sum;
     sumq = "";
     suma = "";
-    sumarr = QLimitRepeats(sumarr, 4);   //Ensures no repeat question until at least 50% of questions shown
-    sum = sumarr[sumarr.length - 1];
+    sumarrprop = QLimitRepeats(sumarrprop, 4);   //Ensures no repeat question until at least 50% of questions shown
+    sum = sumarrprop[sumarrprop.length - 1];
     switch(sum) {
         case 1:     //y prop root x
             y1 = rndgen(2, 10, 0, 1, -1);
